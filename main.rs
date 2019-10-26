@@ -59,11 +59,9 @@ fn transpile(ops: &[Op]) -> String {
                 out.push_str("putchar(*ptr);\n");
             }
             BeginLoop => {
-                // Begin a loop at the current cell
                 out.push_str("while (*ptr) {\n");
             }
             EndLoop => {
-                // Close a loop
                 out.push_str("}\n");
             }
         }
